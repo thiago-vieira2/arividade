@@ -1,20 +1,21 @@
 import { useState } from 'react'
 
+
 import axios from 'axios'
 
 
 
-export default function Delete() {
+export default function DeletePrograma() {
     const [id, setId]= useState('')
     
 
     async function salvar() {
         
 
-        const url = `http://localhost:5020/deletarCanal/${id}`;
+        const url = `http://localhost:5001/programa/${id}`;
         let resp = await axios.delete(url);
 
-        alert('Carro removido da lista. Id: ' + resp.data.id);
+        alert('canal. Id: ' + resp.data.id);
     }
 
 
@@ -35,3 +36,5 @@ export default function Delete() {
         </div>
     )
 }
+
+ 
